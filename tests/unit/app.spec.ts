@@ -1,10 +1,10 @@
-import { request } from "express";
-import app from "../../src/index";
+import {transactions} from '../../src/data';
 
-describe('Transactions API unit', () =>{
+describe('Transactions API - Testes unitários', () =>{
 
-    it('deve iniciar servidor com sucesso', async () => {
-        expect(true).toEqual(true);
-        
-    });
+it('deve retornar uma array de transações', () => {
+   expect(transactions.length).toBeGreaterThan(0);
+   });
+
 });
+  
