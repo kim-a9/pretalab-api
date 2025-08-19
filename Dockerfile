@@ -45,3 +45,5 @@ EXPOSE ${PORT}
 # Define the command to run your application
 # Assuming your built JavaScript entry point is in dist/index.js (adjust as needed)
 CMD ["node", "dist/server.js"]
+
+
