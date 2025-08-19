@@ -1,9 +1,7 @@
 # Stage 1: Build the TypeScript application
 FROM node:20-slim AS build
 
-# Build var
-ARG MONGO_URL
-ENV MONGO_URL=$MONGO_URL
+
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -24,10 +22,7 @@ RUN npm run build
 # Stage 2: Create the final, smaller runtime image
 FROM node:20-slim
 
-# Runtime var
-ARG MONGO_URL
-ENV MONGO_URL=$MONGO_URL
-ENV PORT 3000
+
 
 # Set the working directory inside the container
 WORKDIR /app
